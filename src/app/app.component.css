@@ -1,0 +1,43 @@
+:host {
+  display: grid;
+  place-content: center;
+  height: 100%;
+}
+
+mat-card {
+  padding: 10px;
+  height: 500px;
+  width: 500px;
+  background-color: #444654;
+  color: white;
+}
+
+.person-box {
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.person-box:last-child {
+  border-bottom: none;
+}
+
+.person-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.placeholder {
+  background: #353740;
+  border: dotted 3px white;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.placeholder, .person-box {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.person-box svg {
+  cursor: pointer;
+}
